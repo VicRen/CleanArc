@@ -1,0 +1,37 @@
+apply from: 'buildSystem/dependencies.gradle'
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-SNAPSHOT'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+    }
+    ext {
+        androidApplicationId = 'ren.vic.cleanarc'
+        androidVersionCode = 1
+        androidVersionName = "1.0"
+        testApplicationId = 'ren.vic.cleanarc.test'
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
