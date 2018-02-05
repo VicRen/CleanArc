@@ -34,7 +34,7 @@ public class MessageGetWelcome extends UseCase<Message, MessageGetWelcome.Param>
             this.name = name;
         }
 
-        public Param forName(String name) {
+        public static Param forName(String name) {
             return new Param(name);
         }
     }

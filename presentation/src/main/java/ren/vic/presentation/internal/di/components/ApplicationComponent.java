@@ -11,11 +11,13 @@ import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
 import ren.vic.presentation.internal.di.modules.ApplicationModule;
 import ren.vic.presentation.internal.di.modules.BindingActivityModule;
+import ren.vic.presentation.internal.di.modules.MessageRepositoryModule;
 
 @Singleton
 @Component(modules = {
         ApplicationModule.class,
         BindingActivityModule.class,
+        MessageRepositoryModule.class,
         AndroidSupportInjectionModule.class
 })
 public interface ApplicationComponent extends AndroidInjector<DaggerApplication> {
