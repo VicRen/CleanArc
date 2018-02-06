@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">data</string>
 
-    <string name="welcome_note">Hi %1$s, Welcome</string>
+    <string name="welcome_note">Hi %1$s, Welcome! It\'s %2$s today.</string>
+    <string name="error_note">Oops, an error occurred, please try again later.</string>
 </resources>
