@@ -37,7 +37,7 @@ public class MessageDataRepository implements MessageRepository {
                     Message message = new Message();
                     message.type = 0;
                     if (weatherResponse.isSuccess()) {
-                        message.content = String.format(context.getString(R.string.welcome_note), name, weatherResponse.getWeatherNow().condTxt);
+                        message.content = String.format(context.getString(R.string.welcome_note), name, weatherResponse.getWeatherNow().getCondTxt());
                     } else {
                         message.content = context.getString(R.string.error_note);
                     }

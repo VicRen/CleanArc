@@ -41,7 +41,11 @@ public class WeatherResponse {
 
     public static class WeatherNow {
 
+        public String getCondTxt() {
+            return condTxt;
+        }
+
         @SerializedName("cond_txt")
-        public String condTxt;
+        private String condTxt;
     }
 }
