@@ -51,7 +51,7 @@ public class MessageDataRepositoryTest {
     public void setUp() {
         given(mockRetrofit.getWeatherApi()).willReturn(mockWeatherApi);
         given(mockContext.getString(anyInt())).willReturn("Hi %1$s, Welcome! It\\'s %2$s today.");
-        messageDataRepository = new MessageDataRepository(mockContext, mockRetrofit);
+        messageDataRepository = new MessageDataRepository(mockContext, mockRetrofit, sdkExecutionThread);
         testDisposableObserver = new TestDisposableObserver();
     }
 
